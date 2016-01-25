@@ -1,0 +1,219 @@
+	#container {
+		transition: top 1s ease;
+	}
+
+	html, body {
+				height: 100%;
+			}
+
+			body {
+				background-color: #000000;
+				margin: 0;
+				font-family: Helvetica, sans-serif;;
+				overflow: hidden;
+			}
+
+			a {
+				color: #ffffff;
+			}
+
+			#info {
+				position: absolute;
+				width: 100%;
+				color: #ffffff;
+				padding: 5px;
+				font-family: Monospace;
+				font-size: 13px;
+				font-weight: bold;
+				text-align: center;
+				z-index: 1;
+			}
+
+			#menu {
+				position: absolute;
+				bottom: 20px;
+				width: 100%;
+				text-align: center;
+			}
+
+			.element {
+				width: 120px;
+				height: 160px;
+				text-align: center;
+				cursor: default;
+		    background-position: center center;
+		    background-repeat: no-repeat;
+		    background-size: 100%;
+		    position: relative;
+			}
+
+				.element .number {
+					position: absolute;
+					top: 20px;
+					right: 20px;
+					font-size: 12px;
+					color: rgba(127,255,255,0.75);
+					display: none;
+				}
+
+				.element .symbol {
+					position: absolute;
+					top: 40px;
+					left: 0px;
+					right: 0px;
+					font-size: 60px;
+					font-weight: bold;
+					color: rgba(255,255,255,0.75);
+					text-shadow: 0 0 10px rgba(0,255,255,0.95);
+					display: none;
+				}
+
+				.element .details {
+					position: absolute;
+					bottom: 15px;
+					left: 0px;
+					right: 0px;
+					font-size: 12px;
+					color: rgba(127,255,255,0.75);
+					display: none;
+				}
+
+			button {
+color: rgb(236, 236, 236);
+    background: rgb(0, 0, 0);
+				outline: 1px solid rgba(127,255,255,0.75);
+				border: 0px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+			button:hover {
+				background-color: rgba(0, 0, 0, 0);
+    color: black;
+			}
+			button:active {
+				color: #000000;
+				background-color: rgba(0,255,255,0.75);
+			}
+
+
+
+			/*========================================*/
+
+
+
+
+
+
+
+.leaves-container{
+	top:0px;
+	background:#fff;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0%;
+	/*background:#1E1E20 url(http://premiumcoding.com/CSSTricks/fallingLeaves/autumn.jpg) center top no-repeat;*/
+	overflow: hidden;
+
+}
+
+.loader {
+    text-align: center;
+}
+.loader span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+	margin: -280px 40px 54px  -34px;
+
+    background: #ff0000;
+	background:url("http://premiumcoding.com/CSSTricks/fallingLeaves/leaf.png");
+    
+    -webkit-animation: loader 10s infinite  linear;
+    -moz-animation: loader 10s infinite  linear;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.loader span:nth-child(5n+4) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.loader span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.loader span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.loader span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.loader span:nth-child(7n+2) {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.loader span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.2s;
+    -moz-animation-delay: 5.2s;
+}
+.loader span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 7.4s;
+    -moz-animation-delay: 7.4;
+}
+@-webkit-keyframes loader {
+  0% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+@-moz-keyframes loader {
+  0% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+    
+	-moz-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+   
+	-moz-transform: translate(100px, 600px) rotateZ(270deg); 
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    
+	-moz-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+
