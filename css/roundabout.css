@@ -1,0 +1,39 @@
+/**
+ * Roundable Documentation CSS
+ */
+
+	.roundabout-example {
+		background: transparent;
+		/*background: -moz-linear-gradient(90deg, #1c4547 0%, #256467 100%);
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0.0, #1c4547), color-stop(1.0, #256467));*/
+		
+		height: 350px;
+		margin: 0 -10em;
+		padding: 0 10em 0 5em;
+	}
+
+	.roundabout-example ul {
+		list-style: none;
+		padding-left: 0;
+		width: 55%;
+		margin: 0 auto;
+		height: 250px;
+		
+	}
+	
+	.roundabout-holder { padding: 0; height: 30px; }
+
+	.roundabout-moveable-item {
+		height: 230px;
+		width: 299px;
+		cursor: pointer;
+		background: transparent;
+		/*background: -moz-linear-gradient(90deg, #bbb 0%, #fcfcfc 100%);
+		background: -webkit-gradient(linear, left bottom, left top, color-stop(0.0, #bbb), color-stop(1.0, #fcfcfc));*/
+		/*border: 1px solid #999;*/
+		/*overflow: hidden;*/
+		/*border: 1px solid red;*/
+		padding-left: 30px;
+	}
+
+	.roundabout-in-focus { cursor: auto; }

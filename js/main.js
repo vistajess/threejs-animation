@@ -124,9 +124,6 @@
 				"", "Ununseptium", "(294)", 17, 7,
 				"", "Ununseptium", "(294)", 17, 7,
 				"", "Ununseptium", "(294)", 17, 7,
-				"", "Ununseptium", "(294)", 17, 7,
-				"", "Ununseptium", "(294)", 17, 7,
-				"", "Ununoctium", "(294)", 18, 7
 			];
 
 			var camera, scene, renderer;
@@ -145,7 +142,7 @@
 
 				scene = new THREE.Scene();
 
-				var images = ['images/leaf.png','images/leaf2.png','images/leaf4.png','images/leaf5.png','images/leaf7.png'];
+				var images = ['img/leaf.png','img/leaf2.png','img/leaf4.png','img/leaf5.png','img/leaf7.png'];
 				// table
 
 				for ( var i = 0; i < table.length; i+=5) {
@@ -347,17 +344,39 @@
 			}
 
 var container = $("#container");
+var timer;
+$('#snow').hide();
+$('#spring').hide();
+$('.leaves-container').show();
 function bounce() {
-	setInterval(function() {
+	timer = setInterval(function() {
     container.animate({'top':'15%'},1000)
     container.animate({'top':'0%'},1000)
 	}, 3000);
 }
 
-function styleFunc() {
-	document.getElementById('container').style.top = '5%';
-}
-
 document.querySelector('#sphere').addEventListener('click',function() {
+	$('#snow').show();
+	$('.leaves-container').hide();
+	$('#spring').hide();
 	bounce();
+});
+
+document.querySelector('#table').addEventListener('click',function() {
+	$('#snow').hide();
+	$('#spring').hide();
+	$('.leaves-container').show();
+	clearInterval(timer)
+});
+document.querySelector('#helix').addEventListener('click',function() {
+	console.log('helx')
+	clearInterval(timer)
+
+});
+document.querySelector('#grid').addEventListener('click',function() {
+	$('#snow').hide();
+	$('#spring').show();
+	$('.leaves-container').hide();
+	clearInterval(timer)
+
 });

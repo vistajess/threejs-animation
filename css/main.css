@@ -217,3 +217,53 @@ color: rgb(236, 236, 236);
 }
 
 
+
+
+
+/*===========================================*/
+
+#snow {
+	/*z-index: 99999;*/
+	position: relative;
+	background: #453633;
+	margin: 0px auto;
+	height: 985px;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0E708B', endColorstr='#AACAD5'); 
+	background: -webkit-gradient(linear, left top, left bottom, from(#0E708B), to(#AACAD5)); 
+	background: -moz-linear-gradient(top,  #0E708B,  #AACAD5);
+}
+
+#snow-content{
+	position:relative; 
+	width: 100%;
+	height: 100%;
+}
+#snow-ball {
+	z-index: 1;
+	position: absolute;
+	bottom: 150px;
+	left: 0;
+}
+#snow-globe {
+	position: absolute;
+	bottom: 150px;
+	left: 150px;
+	z-index: 3;
+}
+#globe {
+	z-index: 1;
+	position: absolute;
+	bottom: 150px;
+	left: 300px;
+}
+
+/*================================*/
+
+#spring {
+	background: url('../img/spring.jpgz');
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+
