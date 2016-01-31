@@ -1,0 +1,140 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Helvetica, sans-serif;;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: #ffffff;
+}
+
+#info {
+	position: absolute;
+	width: 100%;
+	color: #ffffff;
+	padding: 5px;
+	font-family: Monospace;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	z-index: 1;
+}
+
+#menu {
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+
+.element-black {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+background-color: black;
+
+}
+
+.element-blue {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+    background-color: #1569C7;
+}
+
+.element-white {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+  background-color: white;
+}
+.element-nude {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:#E2A76F;
+	}
+.element-red {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+  background-color:red;
+}
+
+.element-yellow {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:yellow;
+}
+
+.element-sample {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+  background-color:orange;
+  border: 1px solid black;
+}
+
+.elemen-transparent {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+  background-color:transparent;
+}
+
+.element-hair-green {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:	#12461F;
+}
+.element-body-green {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:	#29A753;
+}
+
+
+button {
+	color: rgba(127,255,255,0.75);
+	background: transparent;
+	outline: 1px solid rgba(127,255,255,0.75);
+	border: 0px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+button:hover {
+	background-color: rgba(0,255,255,0.5);
+}
+button:active {
+	color: #000000;
+	background-color: rgba(0,255,255,0.75);
+}
+
+.hero {
+	background-size: cover;
+	transition: background 0.3s linear;
+}
+.captain-america {
+	background: url('../images/captainamerica.jpg') center center fixed;
+	background-size: cover;
+}
+
