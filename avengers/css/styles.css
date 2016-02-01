@@ -33,13 +33,19 @@ a {
 	text-align: center;
 }
 
+.pixel-color {
+	width: 55px;
+	height: 55px;
+	text-align: center;
+	cursor: default;
+}
+
 .element-black {
 	width: 55px;
 	height: 55px;
 	text-align: center;
 	cursor: default;
-background-color: black;
-
+	background-color: black;
 }
 
 .element-blue {
@@ -110,6 +116,37 @@ background-color: black;
 		text-align: center;
 		cursor: default;
 	  background-color:	#29A753;
+}
+.element-dark-blue {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:	#35346F;
+}
+
+.element-hawkeye-hair {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:	#AB5605;
+}
+
+.element-hawkeye-skin {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:	#FFBB7F;
+}
+
+.element-hawkeye-purple {
+		width: 55px;
+		height: 55px;
+		text-align: center;
+		cursor: default;
+	  background-color:	#83007A;
 }
 
 

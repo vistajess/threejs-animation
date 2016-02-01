@@ -3,7 +3,7 @@
 			var controls;
 
 			var objects = [];
-			var targets = { captainamerica: [], ironman: [], hulk: [], grid: [] };
+			var targets = { captainamerica: [], ironman: [], hulk: [], hawkeye: [] };
 
 			init();
 			animate();
@@ -96,39 +96,19 @@
 					targets.hulk.push( object );
 				}
 
-				// var vector = new THREE.Vector3();
+			// hawkeye
+				for (var i = 0; i < hawkeye.length; i += 5) {
+					var element = document.createElement( 'div' );
+					var object = new THREE.CSS3DObject( element );
+					object.position.x = Math.random() * 10022 - 51;
+					object.position.y = Math.random() * 10041 - 222;
+					object.position.z = Math.random() * 10022 - 1200;
+					scene.add( object );
 
-				// for ( var i = 0, l = objects.length; i < l; i ++ ) {
-
-				// 	var phi = i * 0.175 + Math.PI;
-
-				// 	var object = new THREE.Object3D();
-
-				// 	object.position.x = 900 * Math.sin( phi );
-				// 	object.position.y = - ( i * 8 ) + 450;
-				// 	object.position.z = 900 * Math.cos( phi );
-
-				// 	vector.x = object.position.x * 2;
-				// 	vector.y = object.position.y;
-				// 	vector.z = object.position.z * 2;
-
-				// 	object.lookAt( vector );
-
-				// 	targets.hulk.push( object );
-				// }
-
-				// grid
-
-				for ( var i = 0; i < objects.length; i ++ ) {
-
-					var object = new THREE.Object3D();
-
-					object.position.x = ( ( i % 5 ) * 400 ) - 800;
-					object.position.y = ( - ( Math.floor( i / 5 ) % 5 ) * 400 ) + 800;
-					object.position.z = ( Math.floor( i / 25 ) ) * 1000 - 2000;
-
-					targets.grid.push( object );
-
+				  var object = new THREE.Object3D();
+					object.position.x = ( hawkeye[ i + 3 ] * 60) + 900;
+					object.position.y = - ( hawkeye[ i + 4 ] * 60) + 500;
+					targets.hawkeye.push( object );
 				}
 
 				//
@@ -219,27 +199,53 @@
 					43,45,46,53,54,55,56,58,61,63,64,65,67,70,72,73,74,77,82,85,86,91,92,93,94,
 					99,100,103,110,113,114,115,116,123,126,127,134,135,136,137,140,144,145,147,
 					151,152,153,156,157,158];
-					var hairGreenArray = [8,9,10,11,12,13,16,17,18,19,20,22,23,28,29,30,33,34,44];
+					var hairGreenArray = [8,9,10,11,12,13,16,17,18,19,20,22,23,24,28,29,30,33,34,44];
 					var bodyGreenArray = [37,41,42,47,48,49,50,51,52,57,59,60,62,66,68,69,71,75,76,
-					78,79,80,81,83,84];
-					var blueArray = [];
-					var transparentArray = [131];
+					78,79,80,81,83,84,87,88,89,90,95,96,97,98,101,102,104,105,106,107,108,109,111,
+					112,117,118,119,120,121,122,124,125,146,154,155];
+					var darkBlueArray = [128,129,130,131,132,133];
+					var blueArray = [138,139,141,142,143,148,149,150];
 					var len = $('#container > div > div > div').length;
 					for( var i = 0;i < len; i++) {
 						addColor(blackArray,'element-black');
 						addColor(hairGreenArray,'element-hair-green');
-						addColor(bodyGreenArray,'element-sample');
+						addColor(bodyGreenArray,'element-body-green');
+						addColor(darkBlueArray,'element-dark-blue');
 						addColor(blueArray,'element-blue');
-						addColor(transparentArray,'element-transparent');
 					}
 
 				}, false );
 
-				var button = document.getElementById( 'grid' );
+				var button = document.getElementById( 'hawkeye' );
 				button.addEventListener( 'click', function ( event ) {
-
-					transform( targets.grid, 2000 );
-
+					$('body').css('background','url("images/hawkeye.jpg") center center fixed');
+					$('body').css('background-size','cover');
+					function addColor(array,color) {
+						if(array.indexOf(i) != -1) {
+								$('#container > div > div > div').eq(i).removeAttr('class').attr('class', '').addClass(color);
+						}
+					}
+					transform( targets.hawkeye, 2000 );
+					var blackArray = [0,1,2,3,4,5,6,13,14,20,23,24,29,30,33,34,36,37,38,41,43,
+					44,45,51,52,53,54,56,59,61,62,63,65,68,70,71,72,75,80,83,84,89,90,91,92,97,
+					98,103,106,111,112,115,118,119,121,122,125,127,128,135,136,137,145,148,149,
+					153,156,157,161,164,165,166,167,169,170];
+					var hawkeyeHairArray = [7,8,9,10,11,12,15,16,17,18,19,21,22,25,26,27,28,31,
+					32,35,42,88,101,102,114,116,126,129,138,139,140,141];
+					var hawkeyeSkinArray = [39,40,46,47,48,49,50,55,57,58,60,64,66,67,69,76,77,
+					78,79,85,96,99,100,109,110,113,123,124];
+					var hawkeyePurple = [73,74,81,82,86,87,93,94,95,104,105,107,108,117,120,
+					130,131,132,133,134,142,143,144,146,147,150,151,152,154,155,158,159,160,162,163];
+					var transparentArray = [168];
+					var len = $('#container > div > div > div').length;
+					for( var i = 0;i < len; i++) {
+						addColor(blackArray,'element-black');
+						// addColor(hawkeyeHairArray,'element-hawkeye-hair');
+						addColor(hawkeyeHairArray,'element-hawkeye-hair');
+						addColor(hawkeyeSkinArray,'element-hawkeye-skin');
+						addColor(hawkeyePurple,'element-hawkeye-purple');
+						addColor(transparentArray,'element-transparent');
+					}
 				}, false );
 
 				transform( targets.captainamerica, 2000 );
