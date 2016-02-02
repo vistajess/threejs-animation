@@ -3,7 +3,7 @@
 			var controls;
 
 			var objects = [];
-			var targets = { captainamerica: [], ironman: [], hulk: [], hawkeye: [] };
+			var targets = { captainamerica: [], ironman: [], hulk: [], hawkeye: [], blackwidow: [] };
 
 			init();
 			animate();
@@ -92,7 +92,7 @@
 
 				  var object = new THREE.Object3D();
 					object.position.x = ( hulk[ i + 3 ] * 60) + 900;
-					object.position.y = - ( hulk[ i + 4 ] * 60) + 500;
+					object.position.y = - ( hulk[ i + 4 ] * 60) + 1300;
 					targets.hulk.push( object );
 				}
 
@@ -111,6 +111,20 @@
 					targets.hawkeye.push( object );
 				}
 
+			// blackwidow
+				for (var i = 0; i < blackwidow.length; i += 5) {
+					var element = document.createElement( 'div' );
+					var object = new THREE.CSS3DObject( element );
+					object.position.x = Math.random() * 10022 - 51;
+					object.position.y = Math.random() * 10041 - 222;
+					object.position.z = Math.random() * 10022 - 1200;
+					scene.add( object );
+
+				  var object = new THREE.Object3D();
+					object.position.x = ( blackwidow[ i + 3 ] * 60) + 100;
+					object.position.y = - ( blackwidow[ i + 4 ] * 60) + 500;
+					targets.blackwidow.push( object );
+				}
 				//
 
 				renderer = new THREE.CSS3DRenderer();
@@ -244,6 +258,37 @@
 						addColor(hawkeyeHairArray,'element-hawkeye-hair');
 						addColor(hawkeyeSkinArray,'element-hawkeye-skin');
 						addColor(hawkeyePurple,'element-hawkeye-purple');
+						addColor(transparentArray,'element-transparent');
+					}
+				}, false );
+
+				var button = document.getElementById( 'blackwidow' );
+				button.addEventListener( 'click', function ( event ) {
+					$('body').css('background','url("images/blackwidow.jpg") center center fixed');
+					$('body').css('background-size','cover');
+					function addColor(array,color) {
+						if(array.indexOf(i) != -1) {
+								$('#container > div > div > div').eq(i).removeAttr('class').attr('class', '').addClass(color);
+						}
+					}
+					transform( targets.blackwidow, 2000 );
+					var blackArray = [0,1,2,3,4,5,6,13,14,17,23,24,27,28,33,34,37,40,41,42,45,
+					46,48,55,57,58,61,63,66,68,71,72,75,77,80,82,85,86,89,94,97,98,99,101,102,103,
+					104,106,107,108,119,120,123,128,131,132,133,134,135,136,137,138,139,140,141,
+					142,146,149,150,154,157,158,162,165,166,167,168,170,171];
+					var blackwidowHairArray = [7,8,9,10,11,12,15,16,18,19,20,21,22,25,26,29,30,31,
+					32,35,36,43,44,47,56,59,60,69,70,73,74,83,84,87,88,95,96];
+					var blackwidowSkinArray = [38,39,49,50,51,52,53,54,62,64,65,67,76,78,79,81,
+					90,91,92,93,121,122,129,130];
+					var blackwidowSuitArray = [100,105,109,110,111,112,113,114,115,116,117,118,124,
+					125,126,127,143,144,145,147,148,151,152,153,155,156,159,160,161,163,164];
+					var transparentArray = [169];
+					var len = $('#container > div > div > div').length;
+					for( var i = 0;i < len; i++) {
+						addColor(blackArray,'element-black');
+						addColor(blackwidowHairArray,'element-blackwidow-hair');
+						addColor(blackwidowSkinArray,'element-blackwidow-skin');
+						addColor(blackwidowSuitArray,'element-blackwidow-suit');
 						addColor(transparentArray,'element-transparent');
 					}
 				}, false );
