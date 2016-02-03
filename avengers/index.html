@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/homepage.css">
+</head>
+<body>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+</div>
+<div id="avengers-homepage" style="display:none">
+	<div id="home-btn">	
+			<a href="avengers.html" class="" id="start">
+        START
+    	</a>
+	</div>
+</div>
+
+
+</body>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+$('#avengers-homepage').hide();
+setTimeout(function() {
+	$('#loader-wrapper').fadeOut();
+}, 2500);
+setTimeout(function() {
+	$('#avengers-homepage').fadeIn();
+}, 3000);
+</script>
+</html>
